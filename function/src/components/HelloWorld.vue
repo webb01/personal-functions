@@ -43,8 +43,8 @@
         </a>
     </li>
     <li>
-      <a href="http://vue-loader.vuejs.org/" target="#">
-          vue-loader
+      <a @click="jumpTo">
+          Sort
         </a>
     </li>
     <li>
@@ -65,6 +65,12 @@ export default {
     }
   },
   methods: {
+    // 路由跳转
+    jumpTo () {
+      this.$router.push({
+        path: '/Sort'
+      })
+    },
     // 只能展开单个表格 （单个变量存储状态）
     showSingleList (item, index) {
       if (index === this.currentIndex) {
