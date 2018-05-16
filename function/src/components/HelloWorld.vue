@@ -42,8 +42,8 @@
           vuex
         </a>
     </li>
-    <li>
-      <a @click="jumpTo">
+    <li @click="jumpTo()">
+      <a>
           Sort
         </a>
     </li>
@@ -70,6 +70,7 @@ export default {
       this.$router.push({
         path: '/Sort'
       })
+      console.log('sort')
     },
     // 只能展开单个表格 （单个变量存储状态）
     showSingleList (item, index) {
